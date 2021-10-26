@@ -7,6 +7,7 @@ directory = sys.argv[2]
 
 if not os.path.exists(directory):
     os.makedirs(directory)
+    
 
 for filename in os.listdir(path):
   clean_name = os.path.splitext(filename)[0]
