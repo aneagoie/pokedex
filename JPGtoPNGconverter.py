@@ -16,4 +16,3 @@ for filename in os.listdir(path):
   img.save(f'{directory}/{clean_name}.png', 'png')
   print('all done!')
 
-
