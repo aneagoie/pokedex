@@ -5,7 +5,7 @@ from PIL import Image
 path = sys.argv[1]
 directory = sys.argv[2]
 
-if not os.path.exists(directory):
+if not os.path.isdir(directory):
     os.makedirs(directory)
     
 
