@@ -1,5 +1,7 @@
 # pokedex
 A fun little project 
 
-*visist https://zerotomastery.io/ for more*
+Run:
+`python3 JPGtoPNGconverter.py Pokedex/ new/`
 
+*visist https://zerotomastery.io/ for more*

@@ -15,4 +15,3 @@ for filename in os.listdir(path):
   #added the / in case user doesn't enter it. You may want to check for this and add or remover it. 
   img.save(f'{directory}/{clean_name}.png', 'png')
   print('all done!')
-
