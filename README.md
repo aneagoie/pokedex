@@ -1,4 +1,4 @@
-# pokedex
+# Pokedex
 A fun little project 
 
 Run:
