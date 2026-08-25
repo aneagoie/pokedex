@@ -1,17 +1,11 @@
-import sys
-import os
-from PIL import Image
+from pathlib import Path 
+from PIL import Image, ImageFilter
 
-path = sys.argv[1]
-directory = sys.argv[2]
+script_directory = Path(__file__).resolve().parent
+image_path = script_directory / "Pokedex" /"pikachu.jpg"
 
-if not os.path.exists(directory):
-    os.makedirs(directory)
-    
-
-for filename in os.listdir(path):
-  clean_name = os.path.splitext(filename)[0]
-  img = Image.open(f'{path}{filename}')
-  #added the / in case user doesn't enter it. You may want to check for this and add or remover it. 
-  img.save(f'{directory}/{clean_name}.png', 'png')
-  print('all done!')
+img = Image.open(image_path)
+filtered_img = img.convert('L')
+box  = (100, 100, 400, 400)
+region = filtered_img.crop(box)
+region.save("grey.png","png")
